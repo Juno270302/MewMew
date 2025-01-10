@@ -1,21 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+.gradient-bar {
+  width: 100%; /* Chiều rộng thanh ngang */
+  height: 1px; /* Chiều cao thanh ngang */
+  background: linear-gradient(
+    to right,
+    #f4e324 0%,
+    #f4d921 10%,
+    #f6cf1e 20%,
+    #f7c51b 30%,
+    #f7ba17 40%,
+    #f8b114 50%,
+    #faa110 60%,
+    #fb980d 70%,
+    #fb8f0a 80%,
+    #fd8307 90%,
+    #fe7903 100%
+  );
+}
+
+.rotate-text {
+  position: absolute;
+  transform-origin: 0 80px;
+  line-height: 1rem;
+  top: 0;
 }
